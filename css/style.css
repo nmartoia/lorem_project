@@ -3,21 +3,25 @@ html{
 }
 body{
     margin: 0;
-    display: grid;
 }
 header{
-    background: url(https://via.placeholder.com/350x65?text=Lorem+ipsum);
+    height: 6.5rem;
+    background: url(https://via.placeholder.com/350x65/CCCCCC/CCCCCC);
 }
 header ul{
-    margin-top: 3.7rem; 
+    margin-top: 0; 
+    padding-top:3.7rem ;
 }
 ul{
     list-style: none;
     padding: 0;
 }
+header li{
+    margin: 0 auto;
+}
 .flex{
     display: flex;
-    justify-content: space-around       ;
+    justify-content: center;
 }
 a{
     font-size: 1.6rem;
@@ -61,17 +65,38 @@ footer img{
     margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
-    header{
-        background: url(https://via.placeholder.com/768x65?text=Lorem+ipsum);
-    }
-    header .flex{
-        justify-content: space-evenly;
-    }
     .tablette{
         display: block;
         margin: 0 auto;
     }
-    main>ul>li:first-child{
+    main>div>ul>li:first-child{
         margin: 0 auto;
     }
 }
+@media screen and (min-width: 1200px) {
+    .desktop{
+        display: block;
+    }
+    main>div>ul>li{
+        margin: 0 auto;
+    }  
+    .container {
+        display: grid;
+        grid-template-areas:
+            "sidebar content";
+        grid-template-columns: 1fr 3fr;
+        gap: 20px;
+      }
+      ul{
+        grid-area: content;
+      }
+      
+      aside {
+        grid-area: sidebar;
+        box-sizing: border-box;
+        padding: 1rem;
+      }
+      footer{
+        width: 99.1%;
+      }
+    }
