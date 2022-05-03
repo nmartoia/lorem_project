@@ -22,3 +22,27 @@ ul{
 a{
     font-size: 1.6rem;
 }
+article{
+    width: 15rem;
+    border: 0.1rem solid black;
+}
+article ul{
+    margin: 0;
+}
+.tablette{
+    display: none;
+}
+.desktop{
+    display: none;
+}
+main .flex{
+    justify-content: center;
+}
+aside{
+    border: solid 1px black;
+    width: 97%;
+    margin: 0 auto;
+}
+p{
+    font-size: 1.6rem;
+}
