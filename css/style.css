@@ -1,0 +1,24 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    margin: 0;
+    display: grid;
+}
+header{
+    background: url(https://via.placeholder.com/350x65?text=Lorem+ipsum);
+}
+header ul{
+    margin-top: 3.7rem; 
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+.flex{
+    display: flex;
+    justify-content: space-around       ;
+}
+a{
+    font-size: 1.6rem;
+}
