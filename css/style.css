@@ -16,11 +16,19 @@ ul{
     list-style: none;
     padding: 0;
 }
+.d{
+    display: none;
+}
 header li{
     margin: 0 auto;
 }
 .flex{
     display: flex;
+    justify-content: center;
+}
+.flex2{
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 a{
@@ -29,6 +37,14 @@ a{
 article{
     width: 15rem;
     border: 0.1rem solid black;
+}
+i{
+    position: absolute;
+    margin: 0 0 0 -1.7rem;
+    font-size: 1.6rem;
+}
+.fa-solid{
+    color: yellow;
 }
 article h2{
     text-align: center;
@@ -45,7 +61,7 @@ article ul{
 main .flex{
     justify-content: center;
 }
-aside{
+aside, section{
     border: solid 1px black;
     width: 97%;
     margin: 1rem auto;
@@ -83,14 +99,32 @@ footer img{
     .container {
         display: grid;
         grid-template-areas:
-            "sidebar content";
+            "sidebar section section"
+            "sidebar content article";
         grid-template-columns: 1fr 3fr;
         gap: 20px;
+      }
+      section{
+          grid-area: section;
       }
       ul{
         grid-area: content;
       }
-      
+      .article{
+          width: 24rem;
+          margin: 1rem auto;
+      }
+      .article img{
+          width: 100%;
+          height: 12rem;
+      }
+      .d{
+          display: block;
+          margin: 1rem;
+          box-sizing: border-box;
+          padding: 0.3rem;
+          grid-area:article;
+      }
       aside {
         grid-area: sidebar;
         box-sizing: border-box;
